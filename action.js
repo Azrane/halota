@@ -2,15 +2,26 @@ var i, node;
 
 function viewAchievements()
 {
-	var mccGame = document.getElementById('mccGame').value, mccType = document.getElementById('mccType').value, mccCategory = document.getElementById('mccCategory').value;
+	var mccGame = document.getElementById('mccGame').value, 
+	mccType = document.getElementById('mccType').value, 
+	mccCategory = document.getElementById('mccCategory').value;
 		
 	for(i = 0; i < achData.length; i++)
 	{
 		if(document.getElementById('ap'+achData[i].ID) !== null)
 		{
-			if(mccGame === "allgames" || (mccGame === "Halo1" && achData[i].Halo1 === true) || (mccGame === "Halo2" && achData[i].Halo2 === true) || (mccGame === "Halo3" && achData[i].Halo3 === true) || (mccGame === "Halo4" && achData[i].Halo4 === true) || (mccGame === "Cross" && achData[i].Cross === true))
+			if(mccGame === "allgames" || 
+			(mccGame === "Halo1" && achData[i].Halo1 === true) || 
+			(mccGame === "Halo2" && achData[i].Halo2 === true) || 
+			(mccGame === "Halo3" && achData[i].Halo3 === true) || 
+			(mccGame === "ODST" && achData[i].ODST === true) || 
+			(mccGame === "Halo4" && achData[i].Halo4 === true) || 
+			(mccGame === "Cross" && achData[i].Cross === true))
 			{
-				if(mccType === "alltypes" || (mccType === "Campaign" && achData[i].Campaign === true) || (mccType === "Multi" && achData[i].Multi === true) || (mccType === "Play" && achData[i].Play === true))
+				if(mccType === "alltypes" || 
+				(mccType === "Campaign" && achData[i].Campaign === true) || 
+				(mccType === "Multi" && achData[i].Multi === true) || 
+				(mccType === "Play" && achData[i].Play === true))
 				{
 					if(mccCategory === "allcategories" || achData[i].Category === mccCategory)
 					{
@@ -72,6 +83,7 @@ window.addEventListener("load", function()
 						<option value="Halo1">Halo: CEA</option>\
 						<option value="Halo2">Halo 2A</option>\
 						<option value="Halo3">Halo3</option>\
+						<option value="ODST">Halo 3: ODST</option>\
 						<option value="Halo4">Halo 4</option>\
 						<option value="Cross">Cross-Game</option>\
 					</select>\
