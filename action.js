@@ -123,6 +123,6 @@ window.addEventListener("load", function()
 				<td style="width: 33%; text-align: center;"><a href="#" onclick=\'toggleAchievements(true)\' id=\'hideachievementslink\'>Hide Achievements I\'ve won</a></td>\
 			</tr>\
 		</table>';
-	document.getElementsByTagName("h1")[1].insertAdjacentHTML('afterend', addedHTML);
+	document.getElementsByTagName("h1")[0].insertAdjacentHTML('afterend', addedHTML);
 	document.getElementById('mccSubmit').addEventListener("click", viewAchievements);
 });
