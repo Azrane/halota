@@ -14,7 +14,7 @@ function viewAchievements()
 			(mccGame === "Halo1" && achData[i].Halo1 === true) || 
 			(mccGame === "Halo2" && achData[i].Halo2 === true) || 
 			(mccGame === "Halo3" && achData[i].Halo3 === true) || 
-			(mccGame === "ODST" && achData[i].ODST === true) || 
+			(mccGame === "ODST"  && achData[i].ODST  === true) || 
 			(mccGame === "Halo4" && achData[i].Halo4 === true) || 
 			(mccGame === "Cross" && achData[i].Cross === true))
 			{
@@ -123,6 +123,6 @@ window.addEventListener("load", function()
 				<td style="width: 33%; text-align: center;"><a href="#" onclick=\'toggleAchievements(true)\' id=\'hideachievementslink\'>Hide Achievements I\'ve won</a></td>\
 			</tr>\
 		</table>';
-	document.getElementsByTagName("h1")[1].insertAdjacentHTML('afterend', addedHTML);
+	document.getElementsByTagName("h1")[0].insertAdjacentHTML('afterend', addedHTML);
 	document.getElementById('mccSubmit').addEventListener("click", viewAchievements);
 });
